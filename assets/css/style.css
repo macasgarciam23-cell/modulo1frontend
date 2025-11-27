@@ -1,0 +1,102 @@
+body {
+    background-color: rgb(211, 201, 177); /* ejemplo: beige claro */
+}
+
+main {
+    position: relative;
+    background-image: url(../img/joya3.png);
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    z-index: 1;
+}
+
+/* Overlay claro */
+main::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(
+        255,
+        255,
+        255,
+        0.25
+    ); /* Ajusta a 0.15 o 0.20 si lo quieres menos blanco */
+    z-index: 1;
+}
+
+/* Capa del contenido para que quede encima del overlay */
+main > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Sombra suave en los textos */
+main h1,
+main h4 {
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
+}
+
+.bajar {
+    margin-top: 350px;
+    text-align: center;
+}
+#parrafo {
+    -ms-text-size-adjust: auto;
+}
+
+/* Barra superior nav  */
+.top-bar {
+    background-color: rgb(151, 129, 129);
+    color: white;
+    padding: 6px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+/* Link de la derecha */
+.top-right a {
+    color: white;
+    text-decoration: none;
+}
+h4 {
+    color: aliceblue;
+}
+.top-right a:hover {
+    text-decoration: underline;
+}
+
+.navbar-brand {
+    font-size: 20px;
+    font-weight: bold; /* opcional para que se vea más elegante */
+    color: blue;
+}
+
+.joyas {
+    color: rgb(29, 24, 24) !important;
+    font-weight: bold;
+}
+
+.carrusel-img {
+    max-width: 1000px; /* Ancho máximo */
+    max-height: 1000px; /* Altura máxima */
+    object-fit: contain; /* Mantiene proporción de la imagen */
+}
+
+.color {
+    color: gray;
+}
+
+.imagen {
+    .imagen-ovalada {
+        border-radius: 50%; /* ovalada */
+        display: block;
+        margin: auto;
+        object-fit: cover; /* mantiene proporciones y recorta si es necesario */
+    }
+}
